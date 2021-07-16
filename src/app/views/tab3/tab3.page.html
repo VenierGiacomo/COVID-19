@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>COVID-19</ion-title>
+      <ion-icon name="information-circle-outline" slot='end'(click)="showActionsheet()"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen>
+    <p>Assicurati che i tuoi parenti, amici e chi ti sta intorno sia a conoscenza della situatione!<br> <b>Condividi l'app ed aiutali a tenersi aggiornati.</b></p>
+      <ion-button (click)='shareNow()'><b>CONDIVIDI</b></ion-button>
+<br>
+      <p>Dal mese di febbraio stiamo vivendo un’<b>emergenza sanitaria estremamente drammatica</b>. Il Coronavirus ha messo in ginocchio il sistema sanitario nazionale.
+      L'Italia ha bisongo di te!<br> <b>Aiutaci anche tu con una donazione straordinaria per affrontare questa emergenza.</b>
+      </p>
+      <ion-button (click)='openBrowser()'><b>DONA ORA</b></ion-button>   
+      <br>
+  </ion-content>

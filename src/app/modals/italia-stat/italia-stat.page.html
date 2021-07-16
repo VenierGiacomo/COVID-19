@@ -1,0 +1,85 @@
+<ion-header translucent>
+    <ion-toolbar>
+      <ion-title>{{nome}}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="closeModal()">Chiudi</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen>
+      <ion-segment *ngIf='show' value="casi totali">
+          <ion-segment-button value="casi totali" (click)="selectedView='casi totali'">
+            <ion-label>Casi totali</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="dimessi" (click)="selectedView='dimessi'">
+            <ion-label>Dimessi</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="deceduti" (click)="selectedView='deceduti'">
+            <ion-label>Deceduti</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+  <div [ngSwitch]="selectedView">
+    <div *ngSwitchCase="'casi totali'">
+        <h4>CASI TOTALI</h4>
+      <div class="chart-cont">
+          <ngx-charts-line-chart 
+            [results]="totali"
+            [scheme]="colorSchemew"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxis]="xAxis"
+            [yAxis]="yAxis"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel">
+          </ngx-charts-line-chart>
+        </div>   
+    </div>
+    <div *ngSwitchCase="'dimessi'">
+        <h4>DIMESSI</h4>
+        <div class="chart-cont">
+            <ngx-charts-line-chart 
+              [results]="dimessi"
+              [scheme]="colorSchemes"
+              [showXAxisLabel]="showXAxisLabel"
+              [showYAxisLabel]="showYAxisLabel"
+              [xAxis]="xAxis"
+              [yAxis]="yAxis"
+              [xAxisLabel]="xAxisLabel2"
+              [yAxisLabel]="yAxisLabel">
+            </ngx-charts-line-chart>
+          </div>   
+      </div>  
+      <div *ngSwitchCase="'deceduti'">
+        <h4>DECEDUTI</h4>
+          <div class="chart-cont">
+              <ngx-charts-line-chart 
+                [results]="deceduti"
+                [scheme]="colorSchemed"
+                [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxis]="xAxis"
+                [yAxis]="yAxis"
+                [xAxisLabel]="xAxisLabel3"
+                [yAxisLabel]="yAxisLabel">
+              </ngx-charts-line-chart>
+            </div>   
+        </div>  
+  </div>   
+<section class="new-data">
+  <p class="update">Dati aggiornati al: {{oggi}}</p>
+  <section class="el-list">
+  <div class="element-data warn">
+    <h3>Nuovi infettati</h3>
+    <p>{{this.regionsdata[this.regionsdata.length-1] -this.regionsdata[this.regionsdata.length-2]}}</p>
+  </div>
+  <div class="element-data succ">
+    <h3>Nuovi dimessi</h3>
+    <p>{{this.regionsdata2[this.regionsdata2.length-1] -this.regionsdata2[this.regionsdata2.length-2]}}</p>
+  </div>
+  <div class="element-data dang">
+    <h3>Nuovi deceduti</h3>
+    <p>{{this.regionsdata3[this.regionsdata3.length-1] -this.regionsdata3[this.regionsdata3.length-2]}}</p>
+  </div>
+  </section>
+</section>
+  </ion-content>

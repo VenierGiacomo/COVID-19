@@ -1,0 +1,102 @@
+// chart
+ngx-charts-line-chart{
+    font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+      text-align: center;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      color: #dddddd;
+      -webkit-font-smoothing: antialiased;
+    
+      text-rendering: optimizeLegibility;
+    }
+    ::ng-deep .ngx-charts { text { fill: #ffffff !important; } }
+    
+.chart-cont{
+    position: absolute;
+    width: 90vw;
+    top: 18vh;
+    height: 40vh;
+
+
+}
+    // end chart
+
+    ion-title{
+        text-transform: uppercase;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 24px;
+    }
+
+.new-data{
+    position: absolute;
+    display: block;
+    top:60vh;
+    width: 100vw;
+    height: 40vh;
+   // background: white;
+}
+.element-data{
+    top:5vh;
+    text-align: center;
+    background: linear-gradient(0deg,  rgb(22, 22, 22) 0%, rgb(32, 32, 32) 50%, rgb(44, 44, 44) 100%); 
+    h3{
+        font-size: 2.5vh;
+        text-transform: uppercase;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    p{
+        margin-bottom: 0vh;
+    }
+    margin-top: 2.6vh;
+}
+h4{
+    width: 100vw;
+    font-size: 3vh;
+    margin-top:2vh;
+    text-align: center;
+
+}
+
+.update{
+font-size: 1.8vh;
+top: 2vh;
+color: #bbbbbb;
+margin-left:5vw;
+}
+
+.el-list{
+margin-top: 5vh
+}
+.succ{
+    color:#29c467
+}
+.warn{
+    color: #e0bb2e
+}
+.dang{
+    color: #e04055
+}
+.line{
+stroke-width: 5px!important;
+} 
+.ng-trigger{
+    stroke-width:5px!important;
+} 
+.ng-trigger-animationState{
+    stroke-width: 5px!important;
+}
+g.line-chart  > g.line-series > path{
+    stroke-width: 5px!important;
+}
+path{
+    .line{
+        stroke-width: 5px!important;
+    }
+}
+path.line{
+        stroke-width: 5px!important;
+}
+path > .line{
+    stroke-width: 5px!important;
+}

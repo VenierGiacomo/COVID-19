@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title (click)='handleButtonClick()'><ion-icon name="logo-twitter"></ion-icon></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen *ngIf='err'>
+      <ion-refresher slot="fixed" (ionRefresh)="refr($event)">
+          <ion-refresher-content refreshingSpinner='bubbles' snapbackDuration='1000ms' refreshingText='Tentativo di riconnesione'><br><br><br></ion-refresher-content>
+      </ion-refresher> 
+<p>Siamo spiacenti ma ci sono stati dei problemid i connessione ai server. <br><br>Scorri verso il basso per riprovare</p>
+  
+  </ion-content>
+  <ion-content fullscreen *ngIf='!err'>
+      <ion-refresher slot="fixed" (ionRefresh)="refr($event)">
+          <ion-refresher-content refreshingSpinner='bubbles' snapbackDuration='1000ms' refreshingText='Tentativo di riconnesione'><br><br><br></ion-refresher-content>
+      </ion-refresher> 
+   <div class="tweet" *ngFor='let tweet of tweets'>
+    <div class="tweet-img"><img src={{tweet.img}}></div>
+    <div class="tweet-name">{{tweet.name}}</div>
+    <div class="tweet-text">{{tweet.text}}</div>
+    <div class="tweet-link" [style.display]='tweet.display'(click)='showOriginal(tweet.url)'>Mostra originale</div>
+   </div>
+      
+      </ion-content>

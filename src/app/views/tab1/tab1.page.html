@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>COVID-19</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content fullscreen>
+      <ion-card (click)='presentItaliaModal(italy[0])'>
+          <img src="../assets/italy.jpg" />
+          <ion-card-header>
+            <ion-card-subtitle>Generale</ion-card-subtitle>
+            <ion-card-title>Italia</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Numero di casi: <b>{{italy[0].totale_casi}}</b>
+            <br>
+       
+            Dimessi:  <b>{{italy[0].dimessi_guariti}}</b>
+            <br>
+     
+            Deceduti:  <b>{{italy[0].deceduti}}</b>
+            <div class="bot-rig">Clicca per saperne di più</div>
+          </ion-card-content>
+        </ion-card>
+    <ion-card (click)='presentModal(regione)' *ngFor='let regione of regionsdata'>
+      <img src="../assets/{{regione.nome}}.jpg" />
+      <ion-card-header>
+        <ion-card-subtitle>Regione</ion-card-subtitle>
+        <ion-card-title>{{regione.nome}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Numero di casi: <b>{{regione.totale_casi}}</b>
+        <br>
+   
+        Dimessi:  <b>{{regione.dimessi_guariti}}</b>
+        <br>
+ 
+        Deceduti:  <b>{{regione.deceduti}}</b>
+        <div class="bot-rig">Clicca per saperne di più</div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

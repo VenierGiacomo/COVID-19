@@ -1,0 +1,62 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+.tweet{
+  position: relative;
+  border-radius: 10px;
+  width: 90vw;
+  margin-left:5vw;
+  margin-top: 2vh;
+  border: 1px white solid;
+  padding: 2vh;
+}
+.tweet-img{
+  display: inline-block;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 3vh;
+  margin-left: 1vh;
+  border: white 1px solid;
+  overflow: hidden;
+  img{
+    display: block;
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+}
+}
+.tweet-name{
+  position: absolute;
+  color: #1DA1F2;
+  display: inline-block;
+  width: auto;
+  left: 12vh;
+  text-align: center;
+  font-size: 2.2vh;
+}
+.tweet-text{
+  padding: 1vw;
+  font-size: 1.9vh;
+}
+.tweet-link{
+  display: block;
+  color: #1DA1F2;
+  margin-top: 2vh; 
+  font-size: 3.5vw;
+  left: 0;
+
+}
+
+p{
+  position: absolute;
+  top: 30vh;
+  text-align: center;
+  width: 80vw;
+  left:10vw;
+  color: #cccccc;
+  font-weight: 300;
+  font-size: 3.5vh;
+}
+ion-refresher {
+  z-index: 10;
+}
