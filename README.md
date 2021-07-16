@@ -1,48 +1,27 @@
 
 
-# COVID-19 - A mobile app to help people stay up to date on Covid-19 developments in Italy
+
+
+
+
+# COVID-19 - A simple mobile app to help people stay up to date on Covid-19 developments in Italy
+
+https://user-images.githubusercontent.com/86734894/125982181-93629d5f-d5e1-44ce-a8f9-b885d65d898e.mp4
+
+
+
+- Simple light weight app with regional graphs and data updated daily from the Official Italian Covid GitHub page.
+- It offered a curate feed with relevant news on Covid-19 developments in Italy, using the Twitter API (also for people without an account).
+- Donation page directly connected to the Polyclinics of Milan.
+
+The app was developed using Angular + Ionic Framework.
+Cordova was used to recreate the native webviews in both iOS and Android.
 
 
 
 
 
-- A complete 2 minutes overview of the project with English comentary can be found [here](https://www.youtube.com/watch?v=mReddWSSp-A).
-- Live website: [prenota.cc](https://prenota.cc)
-- More than 40.000€ worth of service booked through the platform per month
-- More than 5000+ users
 
 
-## Brief repository summary  
-This repository is the REST API part of the project.   
-The API is built using Django + Django Rest Framework.
-- It uses JWT as AUTH Protocol
-- It uses Stripe as payment Infrastructure 
-- It uses Pusher as Socket service
-- It uses OneSignal as Push Notification service
-- It uses SMTP to send automated emails to users
-
-
-## Links to the other parts of the project:
-- [User facing mobile App]()
-- [Progessive Web Application](https://github.com/VenierGiacomo/Prenota-PWA)
-- [Business facing mobile App]()
-
-
-## About the project
-Through our mobile apps ([iOS](https://apps.apple.com/app/id1523525291) and [Android](https://play.google.com/store/apps/details?id=io.prenota.client)) and our [website](https://prenota.cc), users can book and pay services in their city in a few seconds.
-
-The services offered range from hairdressers and beauty salons to sports structures and medical services. Additional categories, such as public transportation and tax consulting services, will be added.
-
-#### To the small businesses offering the services, we provide an easy-to-use online calendar personalized on their needs and business category.
-#### This calendar includes a customer database and some analytics on their business performance.
-
-Their calendar is connected to our mobile apps and website, so users can only book in the available time slots, without the need to wait for a confirmation.
-
-
-
-\item Built a mobile app to help people stay up to date on Covid-19 developments.
-\item Regional \textbf{graphs and data updated daily from the Official Italian Covid GitHub page}.
-\item \textbf{Feed with relevant news} on Covid-19 developments in Italy, \textbf{using the Twitter API}
-\item \textbf{Donation page} connected to the Polyclinics of Milan through In-App browser.
 
 
